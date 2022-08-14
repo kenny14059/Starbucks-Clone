@@ -1,0 +1,587 @@
+body{
+    height: 100vh;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(6,minmax(0,auto));
+} 
+nav{
+    margin-bottom: 10px;
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    color: black;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid rgb(189, 182, 182);
+    box-shadow: 1px 2px 5px -3px rgba(0,0,0,0.57);
+}
+nav.sticky{
+    position: fixed;
+    background-color: whitesmoke;
+    top: 0;
+}
+
+.logo{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 40px;
+}
+nav a{
+    color: inherit;
+}
+.sidebar{
+    position: fixed;
+    top: 75px;
+    right: -10000px; 
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    padding-top: 20px;
+    margin: 0;
+    box-shadow: -7px 10px 15px 0px rgba(0,0,0,0.7);
+    transition: all .5s ease-in-out;
+}
+.sidebar ul li{
+   color: rgb(34, 33, 33);
+   padding-left: 40px;
+   line-height: 50px;
+  }
+.tb{
+    font-size: 20px;
+    font-weight: 580;
+  }
+  .sidebar .btwo{
+    border-top: 2px solid rgb(211, 205, 205);
+    margin: 0 20px;
+    padding-top: 20px;
+}
+.inside-menu{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translate(10000px);
+    transition: all .5s;
+}
+.inside-menu li{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.center i{
+    margin-right: 30%;
+}
+#inner{
+    display: none;
+}
+#inner:checked ~ .inside-menu {
+    transform: translate(0);
+}
+#sign{
+    border: 1px solid black;
+    padding: 4px 12px;
+    border-radius: 30px;
+    margin-left: -40px;
+}
+#join{
+    background: black;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+#sign:hover{
+    background-color: #e2ebe8;
+}
+#join:hover{
+    background-color: #535c59;
+}
+.location{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 0;
+    cursor: pointer;
+}
+.location:hover{
+    color: #077551;
+}
+.location i:hover{
+    color: #077551;
+}
+.location i{
+    color: black;
+    margin-right: 12px;
+    font-size: 20px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu i{
+    margin-right: 30px;
+}
+#check{
+    display: none;
+}
+#btn, #cancel{
+  color: rgb(141, 139, 139);
+  font-size: 22px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 4px 8px;
+  transition: all .5s;
+}
+nav label i{
+    border-radius: 50%;
+}
+#btn:hover, #cancel:hover{
+   background-color: rgb(161, 158, 158,.2);
+}
+#btn{
+    pointer-events: auto;
+}
+#cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ .sidebar{
+    right: 0;
+}
+#check:checked ~ label #btn{
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(180deg);
+}
+#check:checked ~ label #cancel{
+    opacity: 1;
+    pointer-events: auto;
+    transform:  rotate(180deg);
+}
+/* the main section */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(158, 154, 154);   
+}
+main ul li{
+    margin: 20px 0  30px  0;
+}
+main .grid div{
+    grid-column: 1/-1;
+}
+main ul li:nth-child(1){
+    background-color: #1e3932 ;
+    color: white;
+}
+main ul li:nth-child(2){
+    background-color: #fa91aa;
+    color: #000;
+}
+main ul li:nth-child(3){
+    background-color: #f06464 ;
+    color: white;
+}
+main ul li:nth-child(4){
+    background-color: #d4e9e2 ;
+    color: #000;
+}
+
+main ul li:nth-child(1) .containerTitle{
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+main ul li:nth-child(1) .containerButton{
+    color:white;
+    border: 1px solid white;
+}
+main ul li:nth-child(2) .containerButton{
+    color: #000;
+    border: 1px solid black;
+}
+main ul li:nth-child(3) .containerButton{
+    color: white;
+    border: 1px solid white;
+}
+main ul li:nth-child(4) .containerButton{
+    color: #000;
+    border: 1px solid black;
+}
+.containerButton:hover{
+    background-color:rgba(117, 108, 108, 0.89);
+}
+main ul li:nth-child(1) .containerDesc{
+    font-size: 15px;
+}
+main ul li:nth-child(n+2) .containerDesc{
+    font-size: 20px;
+}
+
+.containerItem:nth-child(2){
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.containerImg{
+    width: 100%;
+    height: 100%;
+}
+.containerTitle{
+    width: 70%;
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-align: center;
+}
+.containerDesc{
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.containerButton{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 6px 15px;
+    border-radius: 30px;
+}
+main span{
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+}
+main span a{
+    color: #000;
+    text-decoration-line: underline;
+}
+footer{
+   background-color: white;
+}
+.footer-menu{
+    width: 100%;
+    display: block;
+}
+footer ul li{
+    line-height: 60px;
+    padding: 8px 20px;
+}
+footer ul label{
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+}
+footer label i{
+    float: right;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: all .5s;
+}
+footer ul ul{
+    position: static;
+    display: none;
+}
+[id^="check"]:checked ~ ul{
+    display: block;
+}
+[id^="check"]:checked + label i{
+    transform: rotate(180deg);
+}
+footer ul ul li{
+    border-bottom: none;
+    line-height: 30px;
+    padding-left: 30px;
+}
+footer ul ul a{
+    color: rgb(117, 115, 115);
+}
+
+[id^="check"]{
+    display: none;
+}
+.footerTwo{
+    margin: 30px 10px 0px 10px;
+    padding: 40px 20px;
+    border-top: 2px solid rgb(192, 177, 177);
+}
+.fIcons{
+    display: flex;
+    align-items: center;
+}
+.fIcon{
+    width: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.fTitle{
+    font-size: 15px;
+    font-weight: 900;
+    color: rgb(34, 28, 28);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.copyright{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(155, 143, 143);
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width:750px){
+
+nav{
+    height: 85px;
+}
+.logo{
+    top: 16px;
+    left: 20px;
+    width: 50px;
+}
+.sidebar{
+    top: 85px;
+    transition: none;
+}
+main .grid div{
+    grid-column: span 4;
+    padding: 20px 0;
+}
+.containerImg{
+   padding: 25px 0;
+}
+main ul li:nth-child(even) .containerItem:nth-child(1){
+    grid-column: 5/-1;
+    grid-row: 2/3;
+}
+main ul li:nth-child(even) .containerItem:nth-child(2){
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+main ul li:nth-child(n+2) .containerItem:nth-child(2) .containerDesc{
+    width: 70%;
+    font-size: 25px;
+    padding: 20px 0;       
+}
+main span{
+    text-align: center;
+    width: 60%;
+    line-height: 30px;
+}
+
+}
+@media screen and (min-width:790px){
+    nav.sticky{
+    position: static;
+    }
+    nav img{
+        z-index: 1111;
+    }
+    nav label{
+        display: none;
+    }
+    .sidebar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 85px;
+        border-bottom: 1px solid rgb(189, 182, 182);
+        box-shadow: 1px 2px 5px -3px rgba(0,0,0,0.57); 
+        transition: none;   
+    }
+    .sidebar ul{
+        position: relative;
+    }
+    .sidebar ul li{
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+       }
+    .sidebar ul li:nth-child(-n+3){
+        font-variant: small-caps;
+        padding-left: 20px;
+        font-size: 12px;
+       }  
+       .tb{
+        font-size: 17px;
+        font-weight: bolder;
+      }
+    
+    .sidebar ul li:nth-child(1){
+        top: 0;
+        left: 65px;
+    }
+    .sidebar ul li:nth-child(2){
+        top: 0;
+        left: 130px;
+    }
+    .sidebar ul li:nth-child(3){
+        top: 0;
+        left: 220px;
+    }
+    .sidebar ul li:nth-child(5){
+        top: 0;
+        right: 280px;
+    }
+    .sidebar .btwo{
+        border-top: none;
+        top: 0;
+        right: 0;
+        padding: 0;
+        margin-top: 7px;
+        font-size: 15px;
+    }
+    .inside-menu{
+        display: none;
+    }
+    .menu i{
+        display: none;
+     }
+     #sign{
+        padding: 0px 14px;
+        line-height: 30px;
+     }
+     #join{
+        padding: 0px 16px;
+        line-height: 30px;
+    }
+
+    main .grid div{
+        padding: 4% 0;
+    }
+    .containerImg{
+        padding: 5px 0;
+     }
+    
+}
+
+@media screen and (min-width:1020px) {
+    .logo{
+        left: 40px;
+        top: 25px;
+        width: 50px;
+    }
+    .sidebar ul li{
+        margin-top: 10px;
+    }
+    .sidebar ul li:nth-child(-n+3){
+        padding-left: 10px;
+        margin-left: 45px;
+    }  
+   .sidebar{
+    height: 120%;
+    padding-left: 5%;
+    padding-right: 5%;
+   }
+  main .grid div{
+    padding: 5% 0;
+}
+main li:nth-child(n+2) .grid div{
+    padding:  0;
+}
+.containerImg{
+    padding: 0;
+ }
+.containerTitle{
+    font-size: 3em;
+}
+ .footer-menu{
+     display: flex;
+    justify-content: space-evenly; 
+ }
+ footer ul li{
+     padding: 0px 0px;
+     width: 200px;     
+ }
+ footer ul label{
+     font-size: 20px;
+     font-weight: 600;
+     cursor:default;
+     margin-left: 30px;
+     line-height: 30px;
+     
+ }
+ footer label .fa-angle-down{
+    display: none;
+}
+ footer ul ul{
+     display: block;
+ }
+  footer ul ul li{
+     font-size: 15px;
+     padding-top: 30px;     
+     line-height: 20px;
+ }
+ .footerTwo{
+     margin: 30px 10px 10px 10px; 
+     padding: 40px 20px 0px 20px;
+     }
+ .fIcon{
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+ .fTitle{
+    display: inline;
+    margin-right: 20px;
+    border-right: 2px solid rgb(172, 161, 161);
+    padding: 0 25px 0 10px;
+    text-align: center;
+     }
+ .copyright{
+    display: block;
+    margin: 30px 10px 10px 10px;
+    }
+ 
+}
+@media screen and (min-width:1200px) {
+    .containerImg{
+        padding: .001% 0;
+    }
+    main .grid div{
+        padding: 5px 0;
+    }
+    .footer-menu{
+        margin-left: -20%;
+    }
+}
+@media screen and (min-width:1300px) {
+    .containerImg{
+        padding: 0;
+    }
+    main .grid div{
+        padding: 0;
+    }
+}

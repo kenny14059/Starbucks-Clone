@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/753667e60f.js" crossorigin="anonymous"></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+    <nav id="nav">
+        <img src="images/starbucksLogo.png" alt="" class="logo" width="35">
+        <input type="checkbox" id="check">
+        <label for="check" >
+            <i class="fa-solid fa-bars " id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>                    
+        </label>
+         <div class="sidebar">
+            <ul>
+                <li>
+                    <input type="checkbox" id="inner">
+                    <label for="inner" class="menu tb" >
+                     Menu <i class="fa-solid fa-angle-right"></i>
+                    </label>
+                    <ul class="inside-menu">
+                        <li><a href="#" class="center" data-menu><i class="fa-solid fa-angle-left"></i>Menu</a></li>
+                        <li><a href="#">All products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Previous Orders</a></li>
+                        <li><a href="#">Favorite Products</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="tb">Rewards</a></li>
+                <li><a href="#" class="tb">Gift Cards</a></li>
+                <li class="btwo"><a href="#" id="sign">sign in</a>
+                    <a href="#" id="join">join now</a>
+                </li>
+                <li class="location"><i class="fa-solid fa-location-dot"></i>Find a store</li>
+            </ul>
+         </div>
+       
+    </nav>
+    <main data-main >
+           <ul >
+            <li>
+        <div class="grid">
+            <div class="containerItem">
+                <img src="images/starbucks3.jpg" alt="" class="containerImg">
+            </div>
+            <div class="containerItem">
+                <h2 class="containerTitle">Summer is brighter with free treats.*</h2>
+                <a href="#" class="containerButton">join Starbucks Rewards</a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="grid">
+            <div class="containerItem">
+                <img src="images/starbucks4.jpg" alt="" class="containerImg">
+            </div>
+            <div class="containerItem">
+                <h2 class="containerTitle">Refresh on repeat</h2>
+                <span class="containerDesc">Our vibrant Strawberry Acai  Lemonade and Mango
+                    Dragonfruit Lemonade Starbucks Refreshers  beverages are oh so chill
+                </span>
+                <a href="#" class="containerButton">Learn more</a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="grid">
+            <div class="containerItem">
+                <img src="images/starbucks5.jpg" alt="" class="containerImg">
+            </div>
+            <div class="containerItem">
+                <h2 class="containerTitle">Summer shake-up</h2>
+                <span class="containerDesc">Enjoy a creamy nondairy twist with
+                    our Brown Sugar Oat or new Toasted Vanilla Oat Shaken Espresso.
+                </span>
+                <a href="#" class="containerButton">Order now</a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="grid">
+            <div class="containerItem">
+                <img src="images/starbucks6.jpg" alt="" class="containerImg">
+            </div>
+            <div class="containerItem">
+                <h2 class="containerTitle">A magical summer treat</h2>
+                <span class="containerDesc">Our sweetly decorated Unicorn Cake Pop is back.
+                    Enjoy creamy vanilla cake with confetti sprinkles and  
+                    white-chocolaty icing.
+                                </span>
+                <a href="#" class="containerButton">Order now</a>
+            </div>
+        </div>
+    </li>
+        </ul>
+
+        <span>
+            *Starbucks Rewards is available at participating stores. Some 
+            restrictions apply. For full program details, visit 
+            <a href="http://www.starbucks.com/rewards">starbucks.com/rewards</a>
+        </span>
+    </main>
+
+    <footer>
+        <ul class="footer-menu">
+            <li>
+                <input type="checkbox" id="check-1">
+                <label for="check-1">About Us<i class="fa-solid fa-angle-down"></i></label>
+                 <ul>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Our Coffee</a></li>
+                    <li><a href="#">Stories and news</a></li>
+                    <li><a href="#">Starbucks Archives</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                 </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" id="check-2">
+                <label for="check-2">Careers<i class="fa-solid fa-angle-down"></i></label>
+                <ul>
+                    <li><a href="#">Culture and Values</a></li>
+                    <li><a href="#">Inclusion, Diversity, and Equity</a></li>
+                    <li><a href="#">College Achievement Plan</a></li>
+                    <li><a href="#">Alumni Community</a></li>
+                    <li><a href="#">U.S Careers</a></li>
+                    <li><a href="#">International Careers</a></li>
+                  </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" id="check-3">
+                <label for="check-3">Social Impact<i class="fa-solid fa-angle-down"></i></label>
+                    <ul>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Planet</a></li>
+                        <li><a href="#">Environment and Social Impact Reporting</a></li>
+                      </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" id="check-4">
+                <label for="check-4">For Business Partners<i class="fa-solid fa-angle-down"></i></label>
+                <ul>
+                    <li><a href="#">Landlord Support Center</a></li>
+                    <li><a href="#">Suppliers</a></li>
+                    <li><a href="#">Corporate Gift Card Sales</a></li>
+                    <li><a href="#">Office and Foodservice Coffee</a></li>
+                  </ul>
+            </li>
+           
+            <li>
+                <input type="checkbox" id="check-5">
+                <label for="check-5">Order and Pickup<i class="fa-solid fa-angle-down"></i></label>
+                <ul>
+                    <li><a href="#">Order on the App</a></li>
+                    <li><a href="#">Order on the Web</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Order and Pickup Options</a></li>
+                    <li><a href="#">Explore and Find Coffee for Home</a></li>
+                  </ul>
+            </li>
+             
+        </ul>
+        <div class="footerTwo">
+            <div class="fIcons">
+                <img src="images/spotify-brands.svg" alt="" class="fIcon" width="25">
+                <img src="images/facebook-brands.svg" alt="" class="fIcon" width="25">
+                <img src="images/pinterest-brands.svg" alt="" class="fIcon" width="25">
+                <img src="images/instagram-brands.svg" alt="" class="fIcon" width="25">
+                <img src="images/youtube-brands.svg" alt="" class="fIcon" width="25">
+                <img src="images/twitter-brands.svg" alt="" class="fIcon" width="25">
+            </div>
+             <h3 class="fTitle">Privacy Policy</h3>
+             <h3 class="fTitle">Terms of Use</h3>
+             <h3 class="fTitle">CA Supply Chain Act</h3>
+             <h3 class="fTitle">Cookie Preferences</h3>
+             <span class="copyright">@2022 Starbucks Coffee Company. All rights reserved.</span>
+        </div>
+    </footer>
+</body>
+</html>
